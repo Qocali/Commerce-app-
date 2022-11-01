@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .checkdiv{
+            display: inline-block;
+            position: relative;
+            width:100px;
+            height:40px;
+            border-radius: 50%;
+            background-color: rgb(18, 170, 170);
+            
+        }
+        label input{
+            display: none;
+        }
+        .checkdiv .checkspan{
+            width:30px;
+            height:30px;
+            border-radius: 50%;
+            background-color: tomato;
+            display: inline-block;
+            position: absolute;
+            left:5px;
+top:5px;
+        }
+        label input:checked+.checkdiv{
+            background-color: black;
+        }
+        label input:checked+ .checkdiv .checkspan{
+            left:65px;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox">
+        <div class="checkdiv">
+            <span class="checkspan"></span>
+        </div>
+    </label>
+</body>
+</html>
